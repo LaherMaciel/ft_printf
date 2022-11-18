@@ -1,29 +1,29 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   libftprintf.h                                      :+:      :+:    :+:   */
+/*   ft_godnbr.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: lwencesl <laherwpayotmaciel@gmail.com>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/11/18 02:29:17 by lwencesl          #+#    #+#             */
-/*   Updated: 2022/11/18 06:59:42 by lwencesl         ###   ########.fr       */
+/*   Created: 2022/11/18 06:01:16 by lwencesl          #+#    #+#             */
+/*   Updated: 2022/11/18 06:59:29 by lwencesl         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef LIBFTPRINTF_H
-# define LIBFTPRINTF_H
+#include "libftprintf.h"
 
-# include <string.h>
-# include <stdlib.h>
-# include <stdio.h>
-# include <stdint.h>
-# include <unistd.h>
-# include <limits.h>
+int	ft_godnbr(double nbr, char *base, double size)
+{
+	int	cont;
 
-int	ft_printf(const char *a, ...);
-int	ft_printaux(char c, va_list *tab);
-int	ft_putstr(char *s);
-int	ft_putchr(char s);
-int	ft_godnbr(double nbr, char *base, double size);
-
-#endif
+	cont = 0;
+	if (nbr < 0)
+	{
+		cont += write (1, "-", 1);
+		nbr = -nbr;
+	}
+	if (nbr >= size)
+		cont += ft_godnbr(nbr / size, base, size);
+	cont += write (1, &base[((unsigned long) nbr) % ((unsigned long) size)], 1);
+	return (cont);
+}

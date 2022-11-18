@@ -1,29 +1,35 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   libftprintf.h                                      :+:      :+:    :+:   */
+/*   ft_printf.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: lwencesl <laherwpayotmaciel@gmail.com>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/11/18 02:29:17 by lwencesl          #+#    #+#             */
-/*   Updated: 2022/11/18 06:59:42 by lwencesl         ###   ########.fr       */
+/*   Created: 2022/11/18 04:39:45 by lwencesl          #+#    #+#             */
+/*   Updated: 2022/11/18 06:56:33 by lwencesl         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef LIBFTPRINTF_H
-# define LIBFTPRINTF_H
+#include "libftprintf.h"
 
-# include <string.h>
-# include <stdlib.h>
-# include <stdio.h>
-# include <stdint.h>
-# include <unistd.h>
-# include <limits.h>
+int	ft_printf(const char *format, ...)
+{
+	size_t	i;
+	size_t	cont;
+	va_list	tab;
 
-int	ft_printf(const char *a, ...);
-int	ft_printaux(char c, va_list *tab);
-int	ft_putstr(char *s);
-int	ft_putchr(char s);
-int	ft_godnbr(double nbr, char *base, double size);
-
-#endif
+	if (!format)
+		return (0);
+	i = 0;
+	cont = -1;
+	va_start(tab, format);
+	while (format[++cont])
+	{
+		if (format[cont] == '%')
+			i += ft_printaux(format[cont + 1], &tab);
+		else
+			i += write(1, &format[cont], 1);
+	}
+	va_end(tab);
+	return (i);
+}

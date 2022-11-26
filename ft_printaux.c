@@ -6,11 +6,15 @@
 /*   By: lwencesl <laherwpayotmaciel@gmail.com>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/11/18 04:44:23 by lwencesl          #+#    #+#             */
-/*   Updated: 2022/11/18 07:00:28 by lwencesl         ###   ########.fr       */
+/*   Updated: 2022/11/26 16:50:44 by lwencesl         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "libftprintf.h"
+#include "ft_printf.h"
+
+int	ft_putstr(char *s);
+int	ft_putchr(char s);
+int	ft_godnbr(double nbr, char *base, double size);
 
 int	ft_printaux(char c, va_list *tab)
 {

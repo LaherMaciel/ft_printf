@@ -6,11 +6,11 @@
 /*   By: lwencesl <laherwpayotmaciel@gmail.com>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/11/18 06:01:16 by lwencesl          #+#    #+#             */
-/*   Updated: 2022/11/18 06:59:29 by lwencesl         ###   ########.fr       */
+/*   Updated: 2022/11/26 16:50:47 by lwencesl         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "libftprintf.h"
+#include "ft_printf.h"
 
 int	ft_godnbr(double nbr, char *base, double size)
 {

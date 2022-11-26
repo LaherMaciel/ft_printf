@@ -6,11 +6,11 @@
 /*   By: lwencesl <laherwpayotmaciel@gmail.com>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/11/18 05:50:20 by lwencesl          #+#    #+#             */
-/*   Updated: 2022/11/18 07:02:19 by lwencesl         ###   ########.fr       */
+/*   Updated: 2022/11/26 16:50:50 by lwencesl         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "libftprintf.h"
+#include "ft_printf.h"
 
 int	ft_putstr(char *s)
 {

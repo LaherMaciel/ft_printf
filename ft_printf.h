@@ -6,7 +6,7 @@
 /*   By: lwencesl <laherwpayotmaciel@gmail.com>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/11/18 02:29:17 by lwencesl          #+#    #+#             */
-/*   Updated: 2022/11/26 16:50:21 by lwencesl         ###   ########.fr       */
+/*   Updated: 2022/11/29 18:39:23 by lwencesl         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,6 +19,7 @@
 # include <stdint.h>
 # include <unistd.h>
 # include <limits.h>
+# include <stdarg.h>
 
 int	ft_printf(const char *a, ...);
 

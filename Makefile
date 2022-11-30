@@ -11,7 +11,7 @@
 # **************************************************************************** #
 
 NAME = libftprintf.a
-SRC = ft_printf ft_printaux ft_godnbr ft_putstr ft_putchr\
+SRC = ft_printf ft_put_numbers ft_putstr\
 
 CC = cc
 RM = rm -f

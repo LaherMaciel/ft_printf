@@ -1,0 +1,1 @@
+clear && gcc -Wall -Werror -Wextra ft_main.c ft_printf.c ft_put_numbers.c ft_putstr.c && ./a.out

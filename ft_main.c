@@ -11,12 +11,29 @@
 /* ************************************************************************** */
 
 #include "ft_printf.h"
-
+	/*printf(" %p %p \n", LONG_MIN, LONG_MAX);
+	ft_printf(" %p %p ", LONG_MIN, LONG_MAX);*/
 int	main(void)
 {
 	printf("Printf\n");
-	printf("test %d\nnbr\nvamonos!\n\n", printf("test %x\n", 1234567890));
+	printf("test %d\nnbr\nvamonos!\n\n", printf("test %p\n", (void) 15));
 	ft_printf("ft_printf\n");
-	ft_printf("test %d\nnbr\nvamonos! ", ft_printf("test %%x\n", 1234567890));
+	ft_printf("test %d\nnbr\nvamonos! ", ft_printf("test %p\n", (void) 15));
+	ft_printf("\n\n");
+	ft_printf("' %% '");
+	ft_printf("\n");
+	ft_printf("' %%%% '");
+	ft_printf("\n");
+	ft_printf("' %% %% %% '");
+	ft_printf("\n");
+	ft_printf("' %%  %%  %% '");
+	ft_printf("\n");
+	ft_printf("' %%   %%   %% '");
+	ft_printf("\n");
+	ft_printf("'%%'");
+	ft_printf("\n");
+	ft_printf("'%% %%'");
+	ft_printf("\n");
+	ft_printf("\n");
 	return (0);
 }

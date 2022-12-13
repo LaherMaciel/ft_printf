@@ -1,12 +1,12 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_godnbr.c                                        :+:      :+:    :+:   */
+/*   ft_put_numbers.c                                   :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: lwencesl <laherwpayotmaciel@gmail.com>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/11/18 06:01:16 by lwencesl          #+#    #+#             */
-/*   Updated: 2022/11/29 19:44:31 by lwencesl         ###   ########.fr       */
+/*   Updated: 2022/12/13 19:58:29 by lwencesl         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -28,9 +28,9 @@ int	ft_putnbr(double nbr, char *base, double size)
 	return (cont);
 }
 
-int	putpoint(unsigned long nbr, char *base, unsigned long size)
+int	putpoint(unsigned long long nbr, char *base, unsigned long long size)
 {
-	int	cont;
+	unsigned long long	cont;
 
 	cont = 0;
 	if (size != 16)

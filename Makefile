@@ -16,6 +16,7 @@ SRC = ft_printf ft_put_numbers ft_putstr\
 CC = cc
 RM = rm -f
 CFLAGS = -Wall -Werror -Wextra
+
 all:$(NAME)
 
 $(NAME): $(SRC:=.o)

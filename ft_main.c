@@ -20,8 +20,6 @@ int	main(void)
 	ft_printf("ft_printf\n");
 	ft_printf("test %d\nnbr\nvamonos! ", ft_printf("test %x\n", 99));
 	ft_printf("\n\n");
-	ft_printf("%%%c%%%s%%%d%%%i%%%u%%%x%%%X%%%% %%%c%%%s%%%d%%%i%%%u%%%x%%%X%%%% %%%c%%%s%%%d%%%i%%%u%%%x%%%X%%%% %c%%", 'A', "42", 42, 42 ,42 , 42, 42, 'B', "-42", -42, -42 ,-42 ,-42, 42, 'C', "0", 0, 0 ,0 ,0, 42, 0);
-	ft_printf("\n");
 	ft_printf("' %% '");
 	ft_printf("\n");
 	ft_printf("' %%%% '");
@@ -38,5 +36,10 @@ int	main(void)
 	ft_printf("\n");
 	ft_printf("'%%%%%%%% %%%%%%%%'");
 	ft_printf("\n");
+	ft_printf("%%%c%%%s%%%d%%%i%%%u%%%x%%%X%%%% %%%c%%%s%%%d%%%i%%%u%%%x%%%X%%%% \
+	%%%c%%%s%%%d%%%i%%%u%%%x%%%X%%%% %c%%", 'A', "42", 42, 42 ,42 , 42, 42, 'B', \
+	"-42", -42, -42 ,-42 ,-42, 42, 'C', "0", 0, 0 ,0 ,0, 42, 0);
+	ft_printf("\n");
+	
 	return (0);
 }

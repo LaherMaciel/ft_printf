@@ -30,7 +30,7 @@ int	ft_putnbr(double nbr, char *base, double size)
 
 int	putpoint(unsigned long long nbr, char *base, unsigned long long size)
 {
-	unsigned long long	cont;
+	int	cont;
 
 	cont = 0;
 	if (size != 16)
@@ -44,16 +44,5 @@ int	putpoint(unsigned long long nbr, char *base, unsigned long long size)
 	if (nbr >= size)
 		cont += putpoint(nbr / size, base, size);
 	cont += write (1, &base[(nbr) % (size)], 1);
-	return (cont);
-}
-
-int	puthexa(double nbr, char *base, double size)
-{
-	int	cont;
-
-	cont = 0;
-	if (nbr >= size)
-		cont += puthexa(nbr / size, base, size);
-	cont += write (1, &base[((unsigned long) nbr) % ((unsigned long) size)], 1);
 	return (cont);
 }

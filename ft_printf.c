@@ -23,9 +23,9 @@ int	ft_printaux(const char format, va_list args)
 	if (format == 'u')
 		return (ft_putnbr(va_arg(args, unsigned int), "0123456789", 10));
 	if (format == 'X')
-		return (puthexa(va_arg(args, unsigned int), "0123456789ABCDEF", 16));
+		return (ft_putnbr(va_arg(args, unsigned int), "0123456789ABCDEF", 16));
 	if (format == 'x')
-		return (puthexa(va_arg(args, unsigned int), "0123456789abcdef", 16));
+		return (ft_putnbr(va_arg(args, unsigned int), "0123456789abcdef", 16));
 	if (format == 'p')
 		return (putpoint(va_arg(args, unsigned long long), \
 			"0123456789abcdef", 1));

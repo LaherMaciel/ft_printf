@@ -6,11 +6,17 @@
 /*   By: lwencesl <laherwpayotmaciel@gmail.com>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/11/18 04:39:45 by lwencesl          #+#    #+#             */
-/*   Updated: 2022/12/13 19:58:23 by lwencesl         ###   ########.fr       */
+/*   Updated: 2023/01/03 17:26:05 by lwencesl         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "ft_printf.h"
+
+int	ft_putstr(char *s);
+int	ft_putchr(char s);
+int	ft_putnbr(double nbr, char *base, double size);
+int	puthexa(double nbr, char *base, double size);
+int	putpoint(unsigned long long nbr, char *base, unsigned long long size);
 
 int	ft_printaux(const char format, va_list args)
 {

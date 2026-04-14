@@ -1,0 +1,14 @@
+# Build artifacts
+*.o
+*.a
+libftprintf.a
+
+# Test files
+main.c
+main.txt
+
+# Editor
+.vscode/
+
+# macOS
+.DS_Store
